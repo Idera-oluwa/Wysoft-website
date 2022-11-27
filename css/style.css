@@ -649,8 +649,11 @@ p {
     }
 }
 @media (max-width:500px) { 
-    .tp-banner .btn {
+    .tp-banner {
         display: none;
+    }
+    .hero-btn{
+        margin-top: 4cm !important;
     }
 }
 .home-subheading {
