@@ -286,9 +286,6 @@
 		var action = $(this).attr('action');
 		$("#message").slideUp(250,function() {
             $('#message').hide();
-            $('#submit')
-                .after('<img src="../img/assets/contact-form-loader.gif" class="loader" />')
-                .attr('disabled','disabled');
             $.post(action, {
                 name: $('#name').val(),
                 email: $('#email').val(),
@@ -303,6 +300,10 @@
                     if(data.match('success') != null) $('#contactform').slideUp(850, 'easeInOutExpo');
                 }
             );
+            document.getElementById('comments').value = "";
+            document.getElementById('name').value = "";
+            document.getElementById('subject').value = "";
+            document.getElementById('email').value = "";
 		});
 		return false;
 	});
